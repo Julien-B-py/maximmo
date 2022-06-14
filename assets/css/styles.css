@@ -29,8 +29,13 @@ main {
 
 h2 {
   color: #3E3E3E;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-family: "Khula", sans-serif;
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    font-size: 2.25rem;
+  }
 }
 
 nav {
@@ -40,9 +45,19 @@ nav {
   padding-block: 2.25rem;
 }
 nav ul {
-  display: flex;
   list-style: none;
-  gap: 2.625rem;
+  gap: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1024px) {
+  nav ul {
+    width: auto;
+    flex-direction: row;
+    gap: 2.625rem;
+  }
 }
 nav ul li a {
   font-family: "Nunito Sans", sans-serif;
@@ -77,6 +92,12 @@ nav button {
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  nav button {
+    display: block;
+  }
 }
 
 header {
@@ -84,7 +105,17 @@ header {
   overflow: hidden;
   display: flex;
   position: relative;
-  height: 73vh;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  header {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    height: 73vh;
+  }
 }
 header img {
   position: absolute;
@@ -102,20 +133,37 @@ header .overlay {
 }
 header h1 {
   font-family: "Khula", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2.25rem;
   color: #fff;
   line-height: 130%;
+}
+@media screen and (min-width: 768px) {
+  header h1 {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header h1 {
+    font-size: 3.5rem;
+  }
 }
 header h1 div {
   color: #c0dff8;
 }
 header .header__left {
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding-inline: 2.875rem;
+  padding-block: 1rem;
   gap: 0.5rem;
+}
+@media screen and (min-width: 1024px) {
+  header .header__left {
+    width: 50%;
+    padding-block: 0;
+  }
 }
 header .header__left p {
   color: #fff;
@@ -128,6 +176,12 @@ header .header__right {
   position: relative;
   z-index: 10;
   font-weight: 600;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  header .header__right {
+    display: block;
+  }
 }
 header .header__right img {
   width: 44px;
@@ -246,7 +300,27 @@ header .header__right .testimonial .fa-star {
 .nav__left {
   display: flex;
   gap: 3.625rem;
-  align-items: baseline;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1024px) {
+  .nav__left {
+    align-items: baseline;
+    width: auto;
+    flex-wrap: nowrap;
+  }
+}
+.nav__left svg {
+  height: 30px;
+  fill: #282f65;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .nav__left svg {
+    display: none;
+  }
 }
 .nav__left > a {
   display: flex;
@@ -262,6 +336,12 @@ header .header__right .testimonial .fa-star {
   box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   margin-bottom: 7rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  #search {
+    flex-direction: row;
+  }
 }
 #search > * {
   flex: 1 1 0px;
@@ -284,6 +364,7 @@ header .header__right .testimonial .fa-star {
 #search .input {
   background-color: #f8f8f8;
   padding-inline: 1.5rem;
+  padding-block: 0.75rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -336,19 +417,34 @@ header .header__right .testimonial .fa-star {
   color: #626262;
   line-height: 170%;
   font-size: 1.125rem;
-  width: 30%;
+}
+@media screen and (min-width: 1024px) {
+  #partners p {
+    width: 30%;
+  }
 }
 #partners .story {
   display: flex;
   margin-top: 3.5rem;
   gap: 2rem;
   margin-bottom: 6.25rem;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  #partners .story {
+    flex-direction: row;
+  }
 }
 #partners .story__left {
   display: flex;
-  width: calc(50% - 1rem);
+  width: 100%;
   gap: 1.25rem;
   align-items: flex-end;
+}
+@media screen and (min-width: 1024px) {
+  #partners .story__left {
+    width: calc(50% - 1rem);
+  }
 }
 #partners .story__left img {
   border-radius: 4px;
@@ -359,10 +455,15 @@ header .header__right .testimonial .fa-star {
   height: 80%;
 }
 #partners .story__right {
-  width: calc(50% - 1rem);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+@media screen and (min-width: 1024px) {
+  #partners .story__right {
+    width: calc(50% - 1rem);
+  }
 }
 #partners .story__right h2 {
   width: 100%;
@@ -421,6 +522,7 @@ header .header__right .testimonial .fa-star {
 #partners .story__right .story__right__bottom .story__right__bottom__col i {
   height: 38px;
   width: 38px;
+  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,13 +537,24 @@ header .header__right .testimonial .fa-star {
 #services .services__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 4.5rem;
 }
+@media screen and (min-width: 1024px) {
+  #services .services__content {
+    align-items: center;
+  }
+}
 #services .services__content h2 {
-  width: 350px;
-  text-align: center;
+  width: auto;
+  text-align: left;
   line-height: 130%;
+}
+@media screen and (min-width: 1024px) {
+  #services .services__content h2 {
+    width: 350px;
+    text-align: center;
+  }
 }
 #services .services__content h3 {
   font-family: "Nunito Sans", sans-serif;
@@ -452,6 +565,12 @@ header .header__right .testimonial .fa-star {
   display: flex;
   gap: 4rem;
   justify-content: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  #services .services__content .services__details {
+    flex-direction: row;
+  }
 }
 #services .services__content .services__details .service__details__service {
   position: relative;
@@ -462,8 +581,13 @@ header .header__right .testimonial .fa-star {
   flex-direction: column;
   gap: 1rem;
   align-items: center;
-  width: 24%;
+  width: 100%;
   overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  #services .services__content .services__details .service__details__service {
+    width: 24%;
+  }
 }
 #services .services__content .services__details .service__details__service::after {
   content: "";
@@ -518,8 +642,17 @@ header .header__right .testimonial .fa-star {
   border-radius: 4px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: normal;
   padding-block: 5rem;
+  flex-direction: column;
+  gap: 1rem;
+  padding-inline: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  #estimate .estimate__inner {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 #estimate .estimate__inner .estimate__inner__left h2,
 #estimate .estimate__inner .estimate__inner__left p {
@@ -535,24 +668,42 @@ header .header__right .testimonial .fa-star {
 }
 #estimate .estimate__inner .estimate__inner__right {
   display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  #estimate .estimate__inner .estimate__inner__right {
+    flex-direction: row;
+  }
 }
 #estimate .estimate__inner input {
   border: none;
-  border-radius: 4px 0px 0px 4px;
   font-size: 1rem;
   font-family: "Nunito Sans", sans-serif;
   padding-block: 0.75rem;
-  padding-inline: 1.5rem 7.75rem;
+  padding-inline: 3rem;
+  border-radius: 4px 4px 0px 0px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  #estimate .estimate__inner input {
+    border-radius: 4px 0px 0px 4px;
+    padding-inline: 1.5rem 7.75rem;
+  }
 }
 #estimate .estimate__inner button {
   background-color: #FFA800;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 0px 4px 4px;
   border: none;
   padding: 1rem 2.5rem;
   font-family: "Nunito Sans", sans-serif;
   font-size: 1rem;
   color: #fff;
   font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  #estimate .estimate__inner button {
+    border-radius: 0px 4px 4px 0px;
+  }
 }
 
 footer {
@@ -561,18 +712,27 @@ footer {
 footer .footer__top {
   padding: 5rem 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer__top {
+    flex-direction: row;
+  }
 }
 footer .footer__top p {
   background-color: transparent;
   color: #626262;
   padding: 0;
   font-size: 1rem;
+  text-align: left;
 }
 footer .footer__top__col {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  flex: 1;
 }
 footer .footer__top__col:nth-of-type(4) p {
   width: 50%;
@@ -648,6 +808,15 @@ footer p {
   text-align: center;
   padding: 1rem;
   background-color: #282F65;
+}
+
+.hidden {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .hidden {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
