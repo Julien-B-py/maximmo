@@ -12,7 +12,7 @@
 
 <body>
   <main>
-    <nav>
+    <nav class="container">
       <div class="nav__left">
         <a><i class="fa-solid fa-house"></i>MaxImmo</a>
         <ul>
@@ -23,7 +23,8 @@
       </div>
       <button>Se faire rappeler</button>
     </nav>
-    <header>
+
+    <header class="container">
       <img src="./assets/img/header_home.png" alt="" />
       <div class="overlay"></div>
       <div class="header__left">
@@ -63,16 +64,169 @@
         </div>
       </div>
     </header>
-    <section id="search">
-      <select name="" id=""></select>
-      <select name="" id=""></select>
+
+    <section id="search" class="container">
+
+
+      <div class="input">
+        <label for="keyword">
+          <i class="fa-solid fa-magnifying-glass"></i></label>
+        <select required id="keyword">
+          <option value="">Rechercher par mot clé</option>
+          <option value="1">Maison</option>
+          <option value="2">Appartement</option>
+        </select>
+      </div>
+      <div class="input">
+        <label for="type">
+          <i class="fa-solid fa-house"></i></label>
+        <select required id="type">
+          <option value="">Type de bien</option>
+          <option value="1">Maison</option>
+          <option value="2">Appartement</option>
+        </select>
+      </div>
       <div class="input">
         <label for="location">
           <i class="fa-solid fa-location-dot"></i></label>
         <input type="text" placeholder="Localisation recherchée" id="location" />
       </div>
       <button>Trouver un bien</button>
+
+
     </section>
+
+    <section id="partners">
+      <div class="container">
+        <h2>Nos partenaires</h2>
+        <p>Nous sommes agréés avec les plus grandes agences immobilières de la région </p>
+        <div class="story">
+          <div class="story__left">
+            <img src="./assets/img/img1_home.png" alt="">
+            <img src="./assets/img/img2_home.png" alt="">
+          </div>
+          <div class="story__right">
+            <span>Ma story</span>
+            <h2>Le moyen le plus simple et le plus rapide pour trouver</h2>
+            <p>Créée en 2012, l'agence MaxImmo est maintenant reconnue dans toute la région Grande Aquitaine et régions
+              voisines</p>
+            <div class="story__right__bottom">
+              <div class="story__right__bottom__col">
+                <i class="fa-solid fa-gear"></i>
+                <div>
+                  <h6>Fiabilité</h6>
+                  <p>Un sens du service inégalé</p>
+                </div>
+              </div>
+              <div class="story__right__bottom__col">
+                <i class="fa-solid fa-wallet"></i>
+                <div>
+                  <h6>Efficacité</h6>
+                  <p>La qualité au rendez-vous</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="services__content">
+          <h2>Tous les services que nous proposons</h2>
+          <div class="services__details">
+            <div class="service__details__service">
+              <i class="fa-solid fa-house-circle-check"></i>
+              <h3>Acheter</h3>
+              <p>Trouvez le bien qui vous correspond, nous vous conseillons et proposons des produits respectant vos
+                demandes et conditions.</p>
+              <button>Trouver un bien</button>
+            </div>
+            <div class="service__details__service">
+              <i class="fa-solid fa-house-circle-xmark"></i>
+              <h3>Vendre</h3>
+              <p>Mettez en ligne votre appartement ou votre maison, nous nous occupons de toruver les acheteurs
+                potentiels
+                et gérons les visites.</p>
+              <button>Vendez rapidement</button>
+            </div>
+            <div class="service__details__service">
+              <i class="fa-solid fa-house-user"></i>
+              <h3>Louer</h3>
+              <p>Mettez sur le marché de la location votre bien, nous avons des centaines de ménages demandant des
+                locations immobilières chaque mois.</p>
+              <button>Recherchez</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="estimate">
+      <div class="container">
+        <div class="estimate__inner">
+          <div class="estimate__inner__left">
+            <h2>Estimez votre bien immobilier</h2>
+            <p>Commencez par entrer votre adresse email</p>
+          </div>
+          <div class="estimate__inner__right">
+            <input type="email" placeholder="Votre adresse électronique">
+            <button>Estimation</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+
+      <div class="container">
+        <div class="footer__top">
+
+          <div class="footer__top__col">
+            <a><i class="fa-solid fa-house"></i>MaxImmo</a>
+            <p>Votre partenaire immobilier</p>
+          </div>
+          <div class="footer__top__col">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="">Acheter</a></li>
+              <li><a href="">Louer</a></li>
+              <li><a href="">Vendre</a></li>
+              <li><a href="">Estimer son bien</a></li>
+            </ul>
+          </div>
+          <div class="footer__top__col">
+            <h3>A propos</h3>
+            <ul>
+              <li><a href="">Qui sommes-nous ?</a></li>
+              <li><a href="">Nos services</a></li>
+              <li><a href="">Cookies</a></li>
+              <li><a href="">CGU</a></li>
+              <li><a href="">Contactez-nous</a></li>
+            </ul>
+          </div>
+          <div class="footer__top__col">
+            <h3>L’agence</h3>
+            <p>12 place de la gironde
+              33000 - BORDEAUX
+              FRANCE</p>
+            <div class="footer__top__col__socials">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <p>Copyright ©MaxImmo 2021. Toute reproduction partielle ou totale de ce site sera considérée comme illicite.</p>
+    </footer>
+
   </main>
 </body>
 
