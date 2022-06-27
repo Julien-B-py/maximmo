@@ -1,278 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Agence Maxime Obbilier</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <title>Agence Maxime Obbilier</title>
-</head>
-
-<body>
-  <main>
-    <nav class="container">
-      <div class="nav__left">
-        <a><i class="fa-solid fa-house"></i>MaxImmo</a>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-          <path
-            d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
-        </svg>
-
-
-        <ul class="hidden">
-          <li><a href="" class="active">Accueil</a></li>
-          <li><a href="">Catalogue</a></li>
-          <li><a href="">Contactez-moi</a></li>
-        </ul>
-      </div>
-      <button>Se faire rappeler</button>
-    </nav>
-
-    <header class="container">
-      <img src="./assets/img/header_home.png" alt="" />
-      <div class="overlay"></div>
-      <div class="header__left">
-        <h1>
-          <div>Trouvez le bien</div>
-          qui vous correspond
-        </h1>
-        <p>
-          A vos côtés depuis 2012, je vous accompagne dans vos projets
-          immobiliers.
-        </p>
-      </div>
-      <div class="header__right">
-        <img src="./assets/img/avatar1_home.png" alt="" />
-        <img src="./assets/img/avatar2_home.png" alt="" />
-        <img src="./assets/img/avatar5_home.png" alt="" />
-
-        <div class="testimonial">
-          <div class="rating">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p>Maxime est le plus grand professionnel du moment</p>
-          <img src="./assets/img/avatar3_home.png" alt="" />
-        </div>
-        <div class="testimonial">
-          <div class="play">
-            <i class="fa-solid fa-play"></i>
-          </div>
-          <img src="./assets/img/avatar4_home.png" alt="" />
-          <p>Un grand merci à l'équipe MaxImmo</p>
-        </div>
-        <div class="testimonial">
-          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          <img src="./assets/img/avatar6_home.png" alt="" />
-        </div>
-      </div>
-    </header>
-
-    <section id="search" class="container">
-
-
-      <div class="input">
-        <label for="keyword">
-          <i class="fa-solid fa-magnifying-glass"></i></label>
-        <select required id="keyword">
-          <option value="">Rechercher par mot clé</option>
-          <option value="1">Maison</option>
-          <option value="2">Appartement</option>
-        </select>
-      </div>
-      <div class="input">
-        <label for="type">
-          <i class="fa-solid fa-house"></i></label>
-        <select required id="type">
-          <option value="">Type de bien</option>
-          <option value="1">Maison</option>
-          <option value="2">Appartement</option>
-        </select>
-      </div>
-      <div class="input">
-        <label for="location">
-          <i class="fa-solid fa-location-dot"></i></label>
-        <input type="text" placeholder="Localisation recherchée" id="location" />
-      </div>
-      <button>Trouver un bien</button>
-
-
-    </section>
-
-    <section id="partners">
-      <div class="container">
-        <h2>Nos partenaires</h2>
-        <p>Nous sommes agréés avec les plus grandes agences immobilières de la région </p>
-        <div class="story">
-          <div class="story__left">
-            <img src="./assets/img/img1_home.png" alt="">
-            <img src="./assets/img/img2_home.png" alt="">
-          </div>
-          <div class="story__right">
-            <span>Ma story</span>
-            <h2>Le moyen le plus simple et le plus rapide pour trouver</h2>
-            <p>Créée en 2012, l'agence MaxImmo est maintenant reconnue dans toute la région Grande Aquitaine et régions
-              voisines</p>
-            <div class="story__right__bottom">
-              <div class="story__right__bottom__col">
-                <i class="fa-solid fa-gear"></i>
-                <div>
-                  <h6>Fiabilité</h6>
-                  <p>Un sens du service inégalé</p>
-                </div>
-              </div>
-              <div class="story__right__bottom__col">
-                <i class="fa-solid fa-wallet"></i>
-                <div>
-                  <h6>Efficacité</h6>
-                  <p>La qualité au rendez-vous</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="services__content">
-          <h2>Tous les services que nous proposons</h2>
-          <div class="services__details">
-            <div class="service__details__service">
-              <i class="fa-solid fa-house-circle-check"></i>
-              <h3>Acheter</h3>
-              <p>Trouvez le bien qui vous correspond, nous vous conseillons et proposons des produits respectant vos
-                demandes et conditions.</p>
-              <button>Trouver un bien</button>
-            </div>
-            <div class="service__details__service">
-              <i class="fa-solid fa-house-circle-xmark"></i>
-              <h3>Vendre</h3>
-              <p>Mettez en ligne votre appartement ou votre maison, nous nous occupons de toruver les acheteurs
-                potentiels
-                et gérons les visites.</p>
-              <button>Vendez rapidement</button>
-            </div>
-            <div class="service__details__service">
-              <i class="fa-solid fa-house-user"></i>
-              <h3>Louer</h3>
-              <p>Mettez sur le marché de la location votre bien, nous avons des centaines de ménages demandant des
-                locations immobilières chaque mois.</p>
-              <button>Recherchez</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="estimate">
-      <div class="container">
-        <div class="estimate__inner">
-          <div class="estimate__inner__left">
-            <h2>Estimez votre bien immobilier</h2>
-            <p>Commencez par entrer votre adresse email</p>
-          </div>
-          <div class="estimate__inner__right">
-            <input type="email" placeholder="Votre adresse électronique">
-            <button>Estimation</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews">
-      <div class="review">
-        <img src="./assets/img/testimonials1_home.png" alt="">
-        <div class="review__top">
-          <span>Avis clients</span>
-          <h2>Ce que les clients pensent de moi</h2>
-        </div>
-        <div class="review__right">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-            <path
-              d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z" />
-          </svg>
-          <div class="review__text">
-            <div class="review__title">
-              “Le compromis parfait”
-            </div>
-            <p>Maxime a su répondre à nos attentes, trouver le produit qui nous convenait, et a parfaitement répondu à
-              notre budget, c’est L’AGENT immobilier du moment !</p>
-            <div class="review__bottom">
-              <span>Adam Dupont</span>
-              <div class="review__rating">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-            </div>
-            <div class="review__summary">
-              Acquéreur d’une maison de 110m² à Tarbes
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-
-      <div class="container">
-        <div class="footer__top">
-
-          <div class="footer__top__col">
+  <body>
+    <main>
+      <nav>
+        <div class="container nav__inner">
+          <div class="nav__left">
             <a><i class="fa-solid fa-house"></i>MaxImmo</a>
-            <p>Votre partenaire immobilier</p>
-          </div>
-          <div class="footer__top__col">
-            <h3>Services</h3>
-            <ul>
-              <li><a href="">Acheter</a></li>
-              <li><a href="">Louer</a></li>
-              <li><a href="">Vendre</a></li>
-              <li><a href="">Estimer son bien</a></li>
+
+            <svg
+              version="1.1"
+              id="Calque_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="-44 132.75 700 700"
+              enable-background="new -44 132.75 700 700"
+              xml:space="preserve"
+            >
+              <path
+                d="M355.576,433.295l230.466,0.002c27.345,0,49.494,22.149,49.494,49.494c0.055,13.618-5.523,25.979-14.492,34.947
+      c-8.97,8.969-21.335,14.498-34.997,14.487l-230.47,0.061l-99.073-0.138l-230.519,0.055c-27.345,0-49.495-22.149-49.495-49.494
+      c0-27.346,22.149-49.495,49.495-49.495l230.601,0.081H355.576z"
+              />
+              <path
+                d="M256.424,313.205l-230.466-0.001c-27.345,0-49.495-22.149-49.495-49.495c-0.055-13.618,5.524-25.978,14.493-34.946
+      c8.97-8.97,21.335-14.499,34.997-14.488l230.469-0.06l99.073,0.137l230.52-0.055c27.345,0,49.494,22.15,49.494,49.495
+      s-22.149,49.495-49.494,49.495l-230.602-0.082H256.424z"
+              />
+              <path
+                d="M256.452,751.204l-230.466-0.002c-27.345,0-49.495-22.149-49.495-49.494c-0.054-13.618,5.524-25.979,14.493-34.947
+      c8.969-8.969,21.334-14.498,34.997-14.488l230.469-0.06l99.073,0.138l230.519-0.056c27.345,0,49.495,22.15,49.495,49.495
+      c0,27.346-22.15,49.495-49.495,49.495l-230.601-0.082L256.452,751.204z"
+              />
+            </svg>
+
+            <ul class="hidden">
+              <li><a href="./index.html" class="active">Accueil</a></li>
+              <li>
+                <a href="./products.html" data-link="Catalogue">Catalogue</a>
+              </li>
+              <li><a href="" data-link="Contactez-moi">Contactez-moi</a></li>
             </ul>
           </div>
-          <div class="footer__top__col">
-            <h3>A propos</h3>
-            <ul>
-              <li><a href="">Qui sommes-nous ?</a></li>
-              <li><a href="">Nos services</a></li>
-              <li><a href="">Cookies</a></li>
-              <li><a href="">CGU</a></li>
-              <li><a href="">Contactez-nous</a></li>
-            </ul>
-          </div>
-          <div class="footer__top__col">
-            <h3>L’agence</h3>
-            <p>12 place de la gironde
-              33000 - BORDEAUX
-              FRANCE</p>
-            <div class="footer__top__col__socials">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-youtube"></i>
-            </div>
-
-
-          </div>
-
+          <button>Se faire rappeler</button>
         </div>
-      </div>
+      </nav>
 
-      <p>Copyright ©MaxImmo 2021. Toute reproduction partielle ou totale de ce site sera considérée comme illicite.</p>
-    </footer>
+      <header class="container">
+        <img src="./assets/img/header_home.png" alt="" />
+        <div class="overlay"></div>
+        <div class="header__left">
+          <h1>
+            <div>Trouvez le bien</div>
+            qui vous correspond
+          </h1>
+          <p>
+            A vos côtés depuis 2012, je vous accompagne dans vos projets
+            immobiliers.
+          </p>
+        </div>
+        <div class="header__right">
+          <img src="./assets/img/avatar1_home.png" alt="" />
+          <img src="./assets/img/avatar2_home.png" alt="" />
+          <img src="./assets/img/avatar5_home.png" alt="" />
 
-  </main>
+          <div class="testimonial">
+            <div class="rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>Maxime est le plus grand professionnel du moment</p>
+            <img src="./assets/img/avatar3_home.png" alt="" />
+          </div>
+          <div class="testimonial">
+            <div class="play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <img src="./assets/img/avatar4_home.png" alt="" />
+            <p>Un grand merci à l'équipe MaxImmo</p>
+          </div>
+          <div class="testimonial">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i>
+            <img src="./assets/img/avatar6_home.png" alt="" />
+          </div>
+        </div>
+      </header>
 
-  <script src="./assets/js/app.js"></script>
+      <section id="search" class="container">
+        <div class="input">
+          <label for="keyword">
+            <i class="fa-solid fa-magnifying-glass"></i
+          ></label>
+          <select required id="keyword">
+            <option value="">Rechercher par mot clé</option>
+            <option value="1">Maison</option>
+            <option value="2">Appartement</option>
+          </select>
+        </div>
+        <div class="input">
+          <label for="type"> <i class="fa-solid fa-house"></i></label>
+          <select required id="type">
+            <option value="">Type de bien</option>
+            <option value="1">Maison</option>
+            <option value="2">Appartement</option>
+          </select>
+        </div>
+        <div class="input">
+          <label for="location">
+            <i class="fa-solid fa-location-dot"></i
+          ></label>
+          <input
+            type="text"
+            placeholder="Localisation recherchée"
+            id="location"
+          />
+        </div>
+        <button>Trouver un bien</button>
+      </section>
 
-</body>
+      <section id="partners">
+        <div class="container">
+          <h2>Nos partenaires</h2>
+          <p>
+            Nous sommes agréés avec les plus grandes agences immobilières de la
+            région
+          </p>
+          <div class="story">
+            <div class="story__left">
+              <div class="story__img">
+                <div class="story__img__overlay">
+                  <i class="fa-solid fa-hashtag"></i>
+                  Vous cherchez la perle rare, nous trouvons pour vous
+                </div>
+                <img src="./assets/img/img1_home.png" alt="" />
+              </div>
+              <img src="./assets/img/img2_home.png" alt="" />
+            </div>
+            <div class="story__right">
+              <span>Ma story</span>
+              <h2>Le moyen le plus simple et le plus rapide pour trouver</h2>
+              <p>
+                Créée en 2012, l'agence MaxImmo est maintenant reconnue dans
+                toute la région Grande Aquitaine et régions voisines
+              </p>
+              <div class="story__right__bottom">
+                <div class="story__right__bottom__col">
+                  <i class="fa-solid fa-gear"></i>
+                  <div>
+                    <h6>Fiabilité</h6>
+                    <p>Un sens du service inégalé</p>
+                  </div>
+                </div>
+                <div class="story__right__bottom__col">
+                  <i class="fa-solid fa-wallet"></i>
+                  <div>
+                    <h6>Efficacité</h6>
+                    <p>La qualité au rendez-vous</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section id="services">
+        <div class="container">
+          <div class="services__content">
+            <h2>Tous les services que nous proposons</h2>
+            <div class="services__details">
+              <div class="service__details__service">
+                <i class="fa-solid fa-house-circle-check"></i>
+                <h3>Acheter</h3>
+                <p>
+                  Trouvez le bien qui vous correspond, nous vous conseillons et
+                  proposons des produits respectant vos demandes et conditions.
+                </p>
+                <button>Trouver un bien</button>
+              </div>
+              <div class="service__details__service">
+                <i class="fa-solid fa-house-circle-xmark"></i>
+                <h3>Vendre</h3>
+                <p>
+                  Mettez en ligne votre appartement ou votre maison, nous nous
+                  occupons de toruver les acheteurs potentiels et gérons les
+                  visites.
+                </p>
+                <button>Vendez rapidement</button>
+              </div>
+              <div class="service__details__service">
+                <i class="fa-solid fa-house-user"></i>
+                <h3>Louer</h3>
+                <p>
+                  Mettez sur le marché de la location votre bien, nous avons des
+                  centaines de ménages demandant des locations immobilières
+                  chaque mois.
+                </p>
+                <button>Recherchez</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="estimate">
+        <div class="container">
+          <div class="estimate__inner">
+            <div class="estimate__inner__left">
+              <h2>Estimez votre bien immobilier</h2>
+              <p>Commencez par entrer votre adresse email</p>
+            </div>
+            <div class="estimate__inner__right">
+              <input type="email" placeholder="Votre adresse électronique" />
+              <button>Estimation</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews">
+        <div class="reviews__nav">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          <i class="fa-solid fa-arrow-right-long enabled"></i>
+        </div>
+        <div class="reviews__inner">
+          <div class="review">
+            <div class="review__image">
+              <img src="./assets/img/testimonials1_home.png" alt="" />
+              <img
+                class="review__image--inactive"
+                src="./assets/img/testimonials2_home.png"
+                alt=""
+              />
+              <img
+                class="review__image--inactive"
+                src="./assets/img/testimonials3_home.png"
+                alt=""
+              />
+            </div>
+            <div class="review__top">
+              <span>Avis clients</span>
+              <h2>Ce que les clients pensent de moi</h2>
+            </div>
+            <div class="review__right">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"
+                />
+              </svg>
+              <div class="review__text">
+                <div class="review__title"></div>
+                <p></p>
+                <div class="review__bottom">
+                  <span></span>
+                  <div class="review__rating"></div>
+                </div>
+                <div class="review__summary"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__top__col">
+              <a><i class="fa-solid fa-house"></i>MaxImmo</a>
+              <p>Votre partenaire immobilier</p>
+            </div>
+            <div class="footer__top__col">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="">Acheter</a></li>
+                <li><a href="">Louer</a></li>
+                <li><a href="">Vendre</a></li>
+                <li><a href="">Estimer son bien</a></li>
+              </ul>
+            </div>
+            <div class="footer__top__col">
+              <h3>A propos</h3>
+              <ul>
+                <li><a href="">Qui sommes-nous ?</a></li>
+                <li><a href="">Nos services</a></li>
+                <li><a href="">Cookies</a></li>
+                <li><a href="">CGU</a></li>
+                <li><a href="">Contactez-nous</a></li>
+              </ul>
+            </div>
+            <div class="footer__top__col">
+              <h3>L’agence</h3>
+              <p>12 place de la gironde 33000 - BORDEAUX FRANCE</p>
+              <div class="footer__top__col__socials">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          Copyright ©MaxImmo 2021. Toute reproduction partielle ou totale de ce
+          site sera considérée comme illicite.
+        </p>
+      </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/reviews.js"></script>
+  </body>
 </html>
