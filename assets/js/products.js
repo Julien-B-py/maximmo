@@ -3,7 +3,7 @@ let products = [];
 
 const productsContainer = document.querySelector(".products__list");
 
-const createProductCard = (element, index) => {
+const createProductCard = element => {
   const card = document.createElement("div");
   card.classList.add("product__card");
 
@@ -58,7 +58,7 @@ const createProductCard = (element, index) => {
     cardBathrooms.appendChild(cardBathroomsIcon);
     const cardBathroomsP = document.createElement("p");
     const cardBathroomsText = document.createTextNode(
-      `${element.features?.bathrooms} SdB`
+      `${element.areas?.bathroom} SdB`
     );
     cardBathroomsP.appendChild(cardBathroomsText);
     cardBathrooms.appendChild(cardBathroomsP);
@@ -71,7 +71,7 @@ const createProductCard = (element, index) => {
     cardRooms.appendChild(cardRoomsIcon);
     const cardRoomsP = document.createElement("p");
     const cardRoomsText = document.createTextNode(
-      `${element.features?.rooms} Chambres`
+      `${element.areas?.room} Chambres`
     );
     cardRoomsP.appendChild(cardRoomsText);
     cardRooms.appendChild(cardRoomsP);
@@ -89,7 +89,7 @@ const createProductCard = (element, index) => {
   cardSurface.appendChild(cardSurfaceIcon);
   const cardSurfaceP = document.createElement("p");
   const cardSurfaceText = document.createTextNode(
-    `${element.features?.surface} m²`
+    `${element.areas?.surface} m²`
   );
   cardSurfaceP.appendChild(cardSurfaceText);
   cardSurface.appendChild(cardSurfaceP);
@@ -141,9 +141,9 @@ fetch(url)
 
     products = data;
 
-    products.forEach((product, index) => {
+    products.forEach(product => {
       console.log(product)
-      createProductCard(product, index);
+      createProductCard(product);
     });
 
     mixitup('.products__list', {
