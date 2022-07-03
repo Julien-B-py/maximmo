@@ -1128,6 +1128,16 @@ footer p {
   gap: 0.625rem;
   color: #f4bf00;
 }
+#reviews .review .review__right .review__rating .fa-regular {
+  color: rgba(0, 0, 0, 0.3);
+}
+#reviews .review .review__right .review__rating .star {
+  display: flex;
+  position: relative;
+}
+#reviews .review .review__right .review__rating .star .fa-solid {
+  position: absolute;
+}
 #reviews .review .review__right .review__summary {
   font-family: "Nunito Sans";
   font-weight: 400;
@@ -1390,6 +1400,15 @@ footer p {
 #products .products button:hover {
   background-color: #ffa800;
   color: #fff;
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

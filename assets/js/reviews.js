@@ -4,35 +4,25 @@ const reviewsNavBtns = document.querySelectorAll(".reviews__nav i");
 const reviewPrev = reviewsNavBtns[0];
 const reviewNext = reviewsNavBtns[1];
 const reviewSlider = document.querySelector(".review__image");
-const reviewImages = document.querySelectorAll(".review__image img");
+let reviewImages;
 let currentReviewIndex = 0;
 
-const reviews = [
-  {
-    title: "Le compromis parfait",
-    detail:
-      "Maxime a su répondre à nos attentes, trouver le produit qui nous convenait, et a parfaitement répondu à notre budget, c’est L’AGENT immobilier du moment !",
-    name: "Adam Dupont",
-    rating: 5,
-    buy: "Acquéreur d’une maison de 110m² à Tarbes",
-  },
-  {
-    title: "Presque parfait",
-    detail:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci magnam a corrupti sit porro dolore. Dolores dicta quod est provident tempora?",
-    name: "Corinne Querry",
-    rating: 4,
-    buy: "Acquéreuse d’une maison de 243m² à Bordeaux",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet",
-    detail:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis asperiores sunt saepe commodi, id, assumenda at voluptatibus odio, ullam laborum itaque! Eveniet?",
-    name: "Clarice Paquet",
-    rating: 4,
-    buy: "Acquéreuse d’une maison de 137m² à Pau",
-  },
-];
+let reviews = [];
+
+const reviewsUrl = "http://localhost:8000/reviews.php";
+
+fetch(reviewsUrl)
+  .then((response) => response.json())
+  .then((data) => {
+
+    // Shuffle the array and store inside reviews
+    reviews = data.sort(() => Math.random() - 0.5);
+
+    createSlider();
+    updateReview();
+
+  })
+  .catch(err => console.error('error:' + err));
 
 const reviewTitle = document.querySelector(".review__title");
 const reviewText = document.querySelector(".review__text p");
@@ -40,9 +30,21 @@ const reviewAuthor = document.querySelector(".review__bottom span");
 const reviewRating = document.querySelector(".review__rating");
 const reviewSummary = document.querySelector(".review__summary");
 
+const createSlider = () => {
+  reviews.forEach((review, index) => {
+    let reviewImg = document.createElement("img");
+    reviewImg.src = `./assets/img/${review.img}`;
+    if (index > 0) {
+      reviewImg.classList.add("review__image--inactive");
+    }
+    reviewSlider.appendChild(reviewImg);
+  });
+
+}
+
 const updateReview = () => {
   reviewTitle.textContent = reviews[currentReviewIndex].title;
-  reviewText.textContent = reviews[currentReviewIndex].detail;
+  reviewText.textContent = reviews[currentReviewIndex].text;
   reviewAuthor.textContent = reviews[currentReviewIndex].name;
 
   // Clear div
@@ -50,19 +52,46 @@ const updateReview = () => {
     reviewRating.removeChild(reviewRating.firstChild);
   }
 
-  // Create stars
-  for (let i = 0; i < reviews[currentReviewIndex].rating; i++) {
+  let integerRatingPart = Math.trunc(reviews[currentReviewIndex].rating);
+  let decimalRatingPart = Math.round((reviews[currentReviewIndex].rating - integerRatingPart) * 100) / 100;
+
+  // Create full stars
+  for (let i = 0; i < integerRatingPart; i++) {
     let star = document.createElement("i");
     star.classList.add("fa-solid", "fa-star");
     reviewRating.appendChild(star);
   }
 
-  reviewSummary.textContent = reviews[currentReviewIndex].buy;
+  // Create the decimal star if needed
+  if (decimalRatingPart % 1 !== 0) {
+    let decimalStar = document.createElement("div");
+    decimalStar.classList.add("star");
+    let greyStar = document.createElement("i");
+    greyStar.classList.add("fa-regular", "fa-star");
+    decimalStar.appendChild(greyStar);
+    let solidStar = document.createElement("i");
+    solidStar.classList.add("fa-solid", "fa-star");
+    solidStar.style.clipPath = `polygon(0 0, ${decimalRatingPart * 100}% 0, ${decimalRatingPart * 100}% 100%, 0% 100%)`;
+    decimalStar.appendChild(solidStar);
+    reviewRating.appendChild(decimalStar);
+  }
+
+  let starsCount = reviewRating.childElementCount;
+
+  // Complete the rating with empty stars to fit the 5 stars format
+  for (let i = 0; i < 5 - starsCount; i++) {
+    let star = document.createElement("i");
+    star.classList.add("fa-regular", "fa-star");
+    reviewRating.appendChild(star);
+  }
+
+  reviewSummary.textContent = reviews[currentReviewIndex].detail;
 };
 
-updateReview();
+
 
 const highlightNextReview = () => {
+  reviewImages = document.querySelectorAll(".review__image img");
   if (currentReviewIndex < reviewImages.length - 1) {
     currentReviewIndex++;
   }
@@ -74,6 +103,7 @@ const highlightNextReview = () => {
 };
 
 const highlightPrevReview = () => {
+  reviewImages = document.querySelectorAll(".review__image img");
   if (currentReviewIndex > 0) {
     currentReviewIndex--;
   }

@@ -133,9 +133,9 @@ productTypes.forEach((productType, index) => {
 
 
 
-const url = "http://localhost:8000/products.php";
+const productsUrl = "http://localhost:8000/products.php";
 
-fetch(url)
+fetch(productsUrl)
   .then((response) => response.json())
   .then((data) => {
 
