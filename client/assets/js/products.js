@@ -141,6 +141,8 @@ fetch(productsUrl)
 
     products = data;
 
+    loadingAnim.style.display = "none";
+
     products.forEach(product => {
       // console.log(product)
       createProductCard(product);

@@ -79,3 +79,7 @@ const searchInputs = document.querySelectorAll("#search .input");
 searchInputs.forEach(
   (input) => (input.onclick = () => input.lastElementChild.focus())
 );
+
+
+// ---------- LOADING ANIMATION ----------
+const loadingAnim = document.querySelector(".loading");

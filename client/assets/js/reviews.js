@@ -1,9 +1,8 @@
 // ---------- REVIEWS ----------
-
-const reviewsNavBtns = document.querySelectorAll(".reviews__nav i");
-const reviewPrev = reviewsNavBtns[0];
-const reviewNext = reviewsNavBtns[1];
 const reviewSlider = document.querySelector(".review__image");
+let reviewsNavBtns;
+let reviewPrev;
+let reviewNext;
 let reviewImages;
 let currentReviewIndex = 0;
 
@@ -18,6 +17,8 @@ fetch(reviewsUrl)
     // Shuffle the array and store inside reviews
     reviews = data.sort(() => Math.random() - 0.5);
 
+    loadingAnim.style.display = "none";
+
     createSlider();
     updateReview();
 
@@ -30,7 +31,29 @@ const reviewAuthor = document.querySelector(".review__bottom span");
 const reviewRating = document.querySelector(".review__rating");
 const reviewSummary = document.querySelector(".review__summary");
 
+const createSliderNav = () => {
+  let reviewsNav = document.createElement("div");
+  reviewsNav.classList.add("reviews__nav");
+  let arrowLeft = document.createElement("i");
+  arrowLeft.classList.add("fa-solid", "fa-arrow-left-long");
+  let arrowRight = document.createElement("i");
+  arrowRight.classList.add("fa-solid", "fa-arrow-right-long", "enabled");
+  reviewsNav.appendChild(arrowLeft);
+  reviewsNav.appendChild(arrowRight);
+  document.querySelector("#reviews").appendChild(reviewsNav);
+
+  reviewsNavBtns = document.querySelectorAll(".reviews__nav i");
+
+  [reviewPrev, reviewNext] = reviewsNavBtns;
+  reviewNext.onclick = () => slideNext();
+  reviewPrev.onclick = () => slidePrev();
+
+}
+
 const createSlider = () => {
+
+  createSliderNav();
+
   reviews.forEach((review, index) => {
     let reviewImg = document.createElement("img");
     reviewImg.src = `./assets/img/${review.img}`;
@@ -114,7 +137,7 @@ const highlightPrevReview = () => {
   updateReview();
 };
 
-reviewNext.onclick = () => {
+const slideNext = () => {
   highlightNextReview();
 
   reviewSlider.style.transform = `translateX(${100 * currentReviewIndex}%)`;
@@ -125,9 +148,9 @@ reviewNext.onclick = () => {
   if (currentReviewIndex === reviewImages.length - 1) {
     reviewNext.classList.remove("enabled");
   }
-};
+}
 
-reviewPrev.onclick = () => {
+const slidePrev = () => {
   highlightPrevReview();
 
   reviewSlider.style.transform = `translateX(${100 * currentReviewIndex}%)`;
@@ -138,4 +161,4 @@ reviewPrev.onclick = () => {
   if (currentReviewIndex !== reviewImages.length - 1) {
     reviewNext.classList.add("enabled");
   }
-};
+}
