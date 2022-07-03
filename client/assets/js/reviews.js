@@ -9,7 +9,7 @@ let currentReviewIndex = 0;
 
 let reviews = [];
 
-const reviewsUrl = "http://localhost:8000/reviews.php";
+const reviewsUrl = "https://secret-beach-10370.herokuapp.com/reviews.php";
 
 fetch(reviewsUrl)
   .then((response) => response.json())

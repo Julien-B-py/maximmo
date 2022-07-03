@@ -133,7 +133,7 @@ productTypes.forEach((productType, index) => {
 
 
 
-const productsUrl = "http://localhost:8000/products.php";
+const productsUrl = "https://secret-beach-10370.herokuapp.com/products.php";
 
 fetch(productsUrl)
   .then((response) => response.json())
