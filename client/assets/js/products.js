@@ -142,7 +142,7 @@ fetch(productsUrl)
     products = data;
 
     products.forEach(product => {
-      console.log(product)
+      // console.log(product)
       createProductCard(product);
     });
 
